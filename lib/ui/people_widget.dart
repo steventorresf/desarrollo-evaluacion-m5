@@ -19,7 +19,6 @@ class _PeopleWidgetState extends State<PeopleWidget> {
   PeopleController plpCtrl = Get.find();
   GeoController geoCtrl = Get.find();
   // Controladores Widgets
-  final TextEditingController _msgCtrl = TextEditingController();
   final ScrollController _scrollCtrl = ScrollController();
 
   late String lat = '0';
@@ -83,24 +82,6 @@ class _PeopleWidgetState extends State<PeopleWidget> {
       }),
     );
   }
-
-  // Widget para el input de texto
-  // Widget _messageInput() {
-  //   return Container(
-  //     margin: const EdgeInsets.all(5),
-  //     child: TextField(
-  //       decoration: const InputDecoration(
-  //         border: OutlineInputBorder(),
-  //         hintText: "Nombre",
-  //       ),
-  //       controller: _msgCtrl,
-  //       onSubmitted: (value) async {
-  //         await _add();
-  //         _msgCtrl.clear();
-  //       },
-  //     ),
-  //   );
-  // }
 
   // Hacer scroll de los mensajes nuevos
   _scrollToEnd() async {
